@@ -89,7 +89,7 @@ abstract class Result<out T> : Serializable {
                     default()
 
                 } catch (ex: Exception) {
-                    failure(ex)
+                    failure<T>(java.lang.RuntimeException(ex))
                 }
         }
     }
